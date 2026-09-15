@@ -1,0 +1,136 @@
+.help-chat {
+  position: fixed;
+  bottom: 26px;
+  right: 26px;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+.help-fab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--cyan);
+  color: #052027;
+  border-radius: 999px;
+  padding: 16px;
+  font-size: 20px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px -8px rgba(52, 217, 232, 0.55);
+  transition: transform 0.15s ease, padding 0.15s ease;
+}
+
+.help-fab:hover {
+  transform: translateY(-2px);
+}
+
+.help-fab-label {
+  font-size: 14px;
+  padding-right: 4px;
+}
+
+.help-panel {
+  width: 320px;
+  max-height: 440px;
+  display: flex;
+  flex-direction: column;
+  background: var(--navy-800);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  animation: help-pop 0.18s ease;
+}
+
+@keyframes help-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.help-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--border);
+  font-weight: 700;
+  font-size: 14.5px;
+}
+
+.help-close {
+  background: none;
+  color: var(--ink-dim);
+  font-size: 15px;
+}
+
+.help-panel-body {
+  padding: 16px 18px;
+  overflow-y: auto;
+}
+
+.help-intro {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.help-question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.help-question-list button {
+  width: 100%;
+  text-align: left;
+  background: var(--navy-900);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 11px 14px;
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 600;
+  transition: border-color 0.15s ease;
+}
+
+.help-question-list button:hover {
+  border-color: var(--cyan);
+}
+
+.help-back {
+  background: none;
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.help-answer-q {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+.help-answer-a {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+  .help-panel {
+    width: 88vw;
+  }
+  .help-fab-label {
+    display: none;
+  }
+}

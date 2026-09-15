@@ -1,0 +1,43 @@
+# =============================================================================
+# PackVote — Docker Compose
+# =============================================================================
+# This file starts the two application pieces of PackVote:
+#   1. backend  -> the Node + Express REST API
+#   2. frontend -> the React app (built and served as static files)
+#
+# The database is NOT run in Docker. PackVote connects to a MongoDB Atlas
+# cluster (a managed, cloud-hosted MongoDB) using the MONGODB_URI variable
+# in your .env file. See the "MongoDB Atlas setup" section in README.md
+# for step-by-step instructions on creating a free cluster.
+#
+# Run with:  docker compose up --build
+# Stop with: docker compose down
+# =============================================================================
+
+services:
+  backend:
+    build:
+      context: ./backend
+    container_name: packvote-backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    environment:
+      PORT: 5000
+      # Read from the host's .env file. Never hardcode a connection
+      # string here -- see backend/src/config/db.js.
+      MONGODB_URI: ${MONGODB_URI}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      AI_MODEL: ${AI_MODEL:-claude-sonnet-4-5}
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:5000/api}
+    container_name: packvote-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"

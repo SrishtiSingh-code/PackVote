@@ -1,0 +1,37 @@
+.about {
+  padding: 120px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.about-title {
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 700;
+  margin-top: 14px;
+  max-width: 460px;
+}
+
+.about-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 8px;
+}
+
+.about-copy p {
+  font-size: 17px;
+  max-width: 560px;
+}
+
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}

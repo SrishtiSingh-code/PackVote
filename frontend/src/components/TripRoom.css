@@ -1,0 +1,96 @@
+.trip-room-page {
+  min-height: 100vh;
+  padding: 110px 24px 60px;
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(52, 217, 232, 0.1), transparent 45%),
+    var(--navy-950);
+}
+
+.trip-room-card {
+  width: 100%;
+  max-width: 640px;
+  padding: 40px;
+  height: fit-content;
+}
+
+.trip-room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.trip-room-title {
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.trip-room-code-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy-900);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 8px 8px 16px;
+}
+
+.trip-room-code-pill span {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--cyan);
+  letter-spacing: 0.08em;
+}
+
+.trip-room-copy-btn {
+  background: var(--navy-800);
+  border: none;
+  border-radius: 999px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+}
+
+.trip-room-progress {
+  margin-bottom: 26px;
+}
+
+.trip-room-progress-label {
+  font-size: 13.5px;
+  color: var(--ink-dim);
+  margin-bottom: 10px;
+}
+
+.trip-room-progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--navy-900);
+  overflow: hidden;
+}
+
+.trip-room-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--cyan), #7ef0fa);
+  transition: width 0.4s ease;
+}
+
+.trip-room-action {
+  margin-top: 30px;
+}
+
+.trip-room-waiting-note {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--ink-faint);
+  padding: 16px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-sm);
+}

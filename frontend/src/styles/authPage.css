@@ -1,0 +1,127 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 24px 60px;
+  position: relative;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(52, 217, 232, 0.14), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(255, 138, 61, 0.1), transparent 45%),
+    var(--navy-950);
+}
+
+.auth-back {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-dim);
+  font-size: 14px;
+  font-weight: 600;
+  background: none;
+}
+
+.auth-back:hover {
+  color: var(--cyan);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 44px 40px;
+  text-align: left;
+}
+
+.auth-heading {
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.auth-subtitle {
+  font-size: 15px;
+  margin-bottom: 32px;
+  max-width: 360px;
+}
+
+.auth-field {
+  margin-bottom: 22px;
+}
+
+.auth-error {
+  background: rgba(255, 92, 92, 0.1);
+  border: 1px solid rgba(255, 92, 92, 0.35);
+  color: #ff9d9d;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-size: 13.5px;
+  margin-bottom: 20px;
+}
+
+.auth-footer-link {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--ink-dim);
+}
+
+.auth-footer-link button {
+  background: none;
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.auth-success {
+  text-align: center;
+}
+
+.auth-success-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cyan-soft);
+  color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  margin: 0 auto 20px;
+}
+
+.trip-code-box {
+  margin: 22px 0 28px;
+  padding: 22px;
+  border-radius: var(--radius-md);
+  background: var(--navy-900);
+  border: 1.5px dashed var(--cyan);
+}
+
+.trip-code-label {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.trip-code-value {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: var(--cyan);
+}
+
+.auth-success-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.auth-success-actions .btn {
+  flex: 1;
+}
